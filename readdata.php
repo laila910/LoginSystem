@@ -3,9 +3,9 @@
     require 'includes/dbh.inc.php'; 
 
 
-   // require 'checkLogin.php';
+    require 'includes/login.inc.php';
 
-
+     session_start();
 
     $sql = "select * from users order by idUsers desc ";
 
@@ -22,7 +22,7 @@
     <title>PDO - Read Records - PHP CRUD Tutorial</title>
 
     <!-- Latest compiled and minified Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="@(Url.Content("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"))" />
 
     <!-- custom css -->
     <style>
@@ -56,7 +56,7 @@
 
             <?php 
             
-        //    echo 'WELCOME '.  $_SESSION['data']['name'];
+        //    echo 'WELCOME '.  $_SESSION['uidUsers'];
             
             ?>
         <!-- <a href="logout.php">Logout</a> -->
