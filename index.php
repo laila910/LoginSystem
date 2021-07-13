@@ -8,12 +8,14 @@ require "header.php";
    <?php
    if(isset($_SESSION['userId'])){
        echo '<p>You are Logged in!</p>';
+       require 'readdata.php';
    }else{
        echo '<p>You are Logged out!</p>';
        
    }
  
 ?>
+
 
   
     
