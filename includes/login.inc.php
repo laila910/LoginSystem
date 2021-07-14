@@ -59,7 +59,5 @@ require "dbh.inc.php";
       header("Location: ../index.php");
      exit();
 }
-echo mysqli_connect_error($conn);
-      exit();
 
     ?>
