@@ -1,11 +1,11 @@
 <?php 
 
-    require 'includes/dbh.inc.php'; 
+    
 
 
     require 'includes/login.inc.php';
 
-     session_start();
+
 
     $sql = "select * from users order by idUsers desc ";
 
@@ -22,7 +22,8 @@
     <title>PDO - Read Records - PHP CRUD Tutorial</title>
 
     <!-- Latest compiled and minified Bootstrap CSS -->
-    <link rel="stylesheet" href="@(Url.Content("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"))" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
 
     <!-- custom css -->
     <style>
@@ -55,9 +56,9 @@
             <h1>Read Users </h1> <br>
 
             <?php 
-            
-        //    echo 'WELCOME '.  $_SESSION['uidUsers'];
-            
+            if(isset($_SESSION['uidUsers'])){
+            echo 'WELCOME '.  $_SESSION['uidUsers'];
+            }
             ?>
         <!-- <a href="logout.php">Logout</a> -->
 
@@ -119,10 +120,10 @@
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
     <!-- Latest compiled and minified Bootstrap JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 
     <!-- confirm delete record will be here -->
 
